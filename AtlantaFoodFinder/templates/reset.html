@@ -1,6 +1,218 @@
-<h1>Reset Password</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Reset</button>
-</form>
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'figma/global.css' %}">
+    <link rel="stylesheet" href="{% static 'figma/reset.css' %}">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="reset">
+      <header class="content18">
+        <div class="column12">
+          <img
+            class="company-logo-icon8"
+            loading="lazy"
+            alt=""
+            src="../aff/static/public/company-logo.svg"
+          />
+        </div>
+        <div class="column13">
+          <div class="actions5">
+            <button class="button52" id="button">
+              <div class="button53">Home</div>
+            </button>
+            <button class="button54" id="button1">
+              <div class="button55">About</div>
+            </button>
+            <button class="button56">
+              <div class="button57">Explore</div>
+            </button>
+            <button class="button58">
+              <div class="button59">Extras</div>
+            </button>
+            <button class="button60" id="button4">
+              <div class="button61">Login</div>
+            </button>
+            <button class="button62" id="button5">
+              <div class="button63">Sign Up</div>
+            </button>
+          </div>
+        </div>
+      </header>
+      <section class="sign-up-71">
+        <div class="column14">
+          <div class="navbar2">
+            <img
+              class="company-logo-icon9"
+              loading="lazy"
+              alt=""
+              src="../aff/static/public/company-logo1.svg"
+            />
+          </div>
+          <div class="content19">
+            <div class="section-title4">
+              <h1 class="heading6">Forgot Password?</h1>
+              <div class="text13">
+                Don’t remember your password? Reset here!
+              </div>
+            </div>
+            <form class="form2">
+              <div class="input5">
+                <div class="name2">Name*</div>
+                <div class="text-input5">
+                  <div class="placeholder2">Placeholder</div>
+                </div>
+              </div>
+              <div class="input6">
+                <div class="email1">New Password*</div>
+                <input class="text-input6" type="text" />
+              </div>
+              <div class="input7">
+                <div class="password2">Re-Enter Password*</div>
+                <input class="text-input7" type="text" />
+              </div>
+              <div class="container2">
+                <div class="buttons2">
+                  <button class="button64">
+                    <div class="button65">Update Password</div>
+                  </button>
+                  <button class="button66">
+                    <img
+                      class="icon-google2"
+                      alt=""
+                      src="../aff/static/public/icon--google.svg"
+                    />
+
+                    <div class="button67">Sign up with Google</div>
+                  </button>
+                </div>
+                <div class="content20">
+                  <div class="terms">Already have an account?</div>
+                  <div class="link2">Log In</div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="footer2">
+            <div class="text14"></div>
+          </div>
+        </div>
+        <img
+          class="placeholder-image-icon3"
+          loading="lazy"
+          alt=""
+          src="../aff/static/public/placeholder-image3@2x.png"
+        />
+      </section>
+      <footer class="footer-43">
+        <div class="content21">
+          <div class="logo3">
+            <img
+              class="company-logo-icon10"
+              loading="lazy"
+              alt=""
+              src="../aff/static/public/company-logo.svg"
+            />
+          </div>
+          <div class="footer-navigation">
+            <div class="links3">
+              <div class="link-one3">Home</div>
+              <div class="link-two3">About</div>
+              <div class="link-three3">Explore</div>
+              <div class="link-four3">Login</div>
+              <div class="link-five3">Sign Up</div>
+            </div>
+          </div>
+          <div class="social">
+            <div class="social-links3">
+              <img
+                class="icon-facebook3"
+                loading="lazy"
+                alt=""
+                src="../aff/static/public/icon--facebook.svg"
+              />
+
+              <img
+                class="icon-instagram3"
+                loading="lazy"
+                alt=""
+                src="../aff/static/public/icon--instagram.svg"
+              />
+
+              <img
+                class="icon-x3"
+                loading="lazy"
+                alt=""
+                src="../aff/static/public/icon--x.svg"
+              />
+
+              <img
+                class="icon-linkedin3"
+                loading="lazy"
+                alt=""
+                src="../aff/static/public/icon--linkedin.svg"
+              />
+
+              <img
+                class="icon-youtube3"
+                loading="lazy"
+                alt=""
+                src="../aff/static/public/icon--youtube.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="credits3">
+          <div class="divider3"></div>
+          <div class="copyright-info">
+            <div class="row5">
+              <div class="relume-all-rights3"></div>
+              <div class="footer-links3">
+                <div class="privacy-policy3">Privacy Policy</div>
+                <div class="terms-of-service3">Terms of Service</div>
+                <div class="cookies-settings3">Cookies Settings</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      var button = document.getElementById("button");
+      if (button) {
+        button.addEventListener("click", function (e) {
+          window.location.href = "./home.html";
+        });
+      }
+      
+      var button1 = document.getElementById("button1");
+      if (button1) {
+        button1.addEventListener("click", function (e) {
+          window.location.href = "./about.html";
+        });
+      }
+      
+      var button4 = document.getElementById("button4");
+      if (button4) {
+        button4.addEventListener("click", function (e) {
+          window.location.href = "./login.html";
+        });
+      }
+      
+      var button5 = document.getElementById("button5");
+      if (button5) {
+        button5.addEventListener("click", function (e) {
+          window.location.href = "./signup.html";
+        });
+      }
+      </script>
+  </body>
+</html>

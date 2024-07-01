@@ -1,9 +1,223 @@
-{% include "header.html" %}
-<h1>Login</h1>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Login</button>
-    <a href="{% url 'signup' %}">Create Account</a>
-    <a href="{% url 'reset' %}">Reset Password</a>
-</form>
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="{% static 'figma/global.css' %}">
+    <link rel="stylesheet" href="{% static 'figma/login.css' %}">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="login">
+      <header class="content10">
+        <div class="column6">
+          <img
+            class="company-logo-icon2"
+            loading="lazy"
+            alt=""
+            src="../aff/static/public/company-logo.svg"
+          />
+        </div>
+        <div class="column7">
+          <nav class="actions3">
+            <button class="button20" id="button">
+              <div class="button21">Home</div>
+            </button>
+            <button class="button22" id="button1">
+              <div class="button23">About</div>
+            </button>
+            <button class="button24">
+              <div class="button25">Explore</div>
+            </button>
+            <button class="button26">
+              <div class="button27">Extras</div>
+            </button>
+            <button class="button28">
+              <div class="button29">Login</div>
+            </button>
+            <button class="button30" id="button5">
+              <div class="button31">Sign Up</div>
+            </button>
+          </nav>
+        </div>
+      </header>
+      <section class="login-7">
+        <div class="column8">
+          <div class="navbar">
+            <img
+              class="company-logo-icon3"
+              alt=""
+              src="../aff/static/public/company-logo1.svg"
+            />
+          </div>
+          <div class="content11">
+            <div class="section-title2">
+              <h1 class="log-in">Log In</h1>
+              <div class="login-description">
+                Log In to see your saved settings and restaurants!
+              </div>
+            </div>
+            <form class="form">
+              <div class="input">
+                <div class="name">Name*</div>
+                <input class="text-input" type="text" />
+              </div>
+              <div class="input1">
+                <div class="row2">
+                  <div class="password">Password*</div>
+                  <div class="forgot-your-password" id="forgotYourPassword">
+                    Forgot your password?
+                  </div>
+                </div>
+                <input class="text-input1" type="text" />
+              </div>
+              <div class="container">
+                <div class="buttons">
+                  <button class="button32">
+                    <div class="button33">Log in</div>
+                  </button>
+                  <button class="button34">
+                    <img
+                      class="icon-google"
+                      alt=""
+                      src="../aff/static/public/icon--google.svg"
+                    />
+
+                    <div class="button35">Log in with Google</div>
+                  </button>
+                </div>
+                <div class="content12">
+                  <div class="dont-have-an">Don't have an account?</div>
+                  <div class="link" id="linkText">Sign Up</div>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="footer">
+            <div class="text9">© 2022 Relume</div>
+          </div>
+        </div>
+        <img
+          class="placeholder-image-icon1"
+          loading="lazy"
+          alt=""
+          src="../aff/static/public/placeholder-image1@2x.png"
+        />
+      </section>
+      <footer class="footer-41">
+        <div class="content13">
+          <div class="logo1">
+            <img
+              class="company-logo-icon4"
+              loading="lazy"
+              alt=""
+              src="../aff/static/public/company-logo.svg"
+            />
+          </div>
+          <div class="footer-links-container">
+            <div class="links1">
+              <div class="link-one1">Home</div>
+              <div class="link-two1">About</div>
+              <div class="link-three1">Explore</div>
+              <div class="link-four1">Login</div>
+              <div class="link-five1">Sign Up</div>
+            </div>
+          </div>
+          <div class="social-container1">
+            <div class="social-links1">
+              <img
+                class="icon-facebook1"
+                loading="lazy"
+                alt=""
+                src="../aff/static/public/icon--facebook.svg"
+              />
+
+              <img
+                class="icon-instagram1"
+                loading="lazy"
+                alt=""
+                src="../aff/static/public/icon--instagram.svg"
+              />
+
+              <img
+                class="icon-x1"
+                loading="lazy"
+                alt=""
+                src="../aff/static/public/icon--x.svg"
+              />
+
+              <img
+                class="icon-linkedin1"
+                loading="lazy"
+                alt=""
+                src="../aff/static/public/icon--linkedin.svg"
+              />
+
+              <img
+                class="icon-youtube1"
+                loading="lazy"
+                alt=""
+                src="../aff/static/public/icon--youtube.svg"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="credits1">
+          <div class="divider1"></div>
+          <div class="copyright">
+            <div class="row3">
+              <div class="relume-all-rights1"></div>
+              <div class="footer-links1">
+                <div class="privacy-policy1">Privacy Policy</div>
+                <div class="terms-of-service1">Terms of Service</div>
+                <div class="cookies-settings1">Cookies Settings</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      var button = document.getElementById("button");
+      if (button) {
+        button.addEventListener("click", function (e) {
+          window.location.href = "./home.html";
+        });
+      }
+      
+      var button1 = document.getElementById("button1");
+      if (button1) {
+        button1.addEventListener("click", function (e) {
+          window.location.href = "./about.html";
+        });
+      }
+      
+      var button5 = document.getElementById("button5");
+      if (button5) {
+        button5.addEventListener("click", function (e) {
+          window.location.href = "../signup/";
+        });
+      }
+      
+      var forgotYourPassword = document.getElementById("forgotYourPassword");
+      if (forgotYourPassword) {
+        forgotYourPassword.addEventListener("click", function (e) {
+          window.location.href = "../reset/";
+        });
+      }
+      
+      var linkText = document.getElementById("linkText");
+      if (linkText) {
+        linkText.addEventListener("click", function (e) {
+          window.location.href = "../signup/";
+        });
+      }
+      </script>
+  </body>
+</html>

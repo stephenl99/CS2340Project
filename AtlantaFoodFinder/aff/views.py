@@ -11,7 +11,7 @@ from . import models
 def index(request):
     #template = loader.get_template("html.html")
     # return render(request, "aff/../templates/html.html")
-    return render(request, "aff/../../templates/html.html")
+    return render(request, "aff/../../templates/home.html")
 
     #return HttpResponse(template.render({}, request))
     #return HttpResponse("Are you hungry Atlanta?")
@@ -67,7 +67,7 @@ def user_resetpassword(request):
 
 # class MapView(View):
 def MapView(request):
-    template_name = "aff/index.html"
+    template_name = "aff/home.html"
     return render(request, template_name)
     #def get(self,request):
      #   context = {
